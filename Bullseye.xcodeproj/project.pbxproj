@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1C79EFB2BA8BFD800F80F50 /* Bullseye bg image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C1C79EFA2BA8BFD800F80F50 /* Bullseye bg image.jpeg */; };
 		C1CEC7372BA5D13E0040CC57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CEC7362BA5D13E0040CC57 /* AppDelegate.swift */; };
 		C1CEC7392BA5D13E0040CC57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CEC7382BA5D13E0040CC57 /* SceneDelegate.swift */; };
 		C1CEC73B2BA5D13E0040CC57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CEC73A2BA5D13E0040CC57 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C1C79EFA2BA8BFD800F80F50 /* Bullseye bg image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bullseye bg image.jpeg"; sourceTree = "<group>"; };
 		C1CEC7332BA5D13E0040CC57 /* Bullseye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bullseye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CEC7362BA5D13E0040CC57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1CEC7382BA5D13E0040CC57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		C1CEC7352BA5D13E0040CC57 /* Bullseye */ = {
 			isa = PBXGroup;
 			children = (
+				C1C79EFA2BA8BFD800F80F50 /* Bullseye bg image.jpeg */,
 				C1CEC7362BA5D13E0040CC57 /* AppDelegate.swift */,
 				C1CEC7382BA5D13E0040CC57 /* SceneDelegate.swift */,
 				C1CEC73A2BA5D13E0040CC57 /* ViewController.swift */,
@@ -128,6 +131,7 @@
 				C1CEC7402BA5D1400040CC57 /* Assets.xcassets in Resources */,
 				C1CEC7432BA5D1400040CC57 /* Base in Resources */,
 				C1CEC73E2BA5D13E0040CC57 /* Base in Resources */,
+				C1C79EFB2BA8BFD800F80F50 /* Bullseye bg image.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
