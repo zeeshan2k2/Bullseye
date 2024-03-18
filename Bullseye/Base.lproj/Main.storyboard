@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vC1-Dz-xA5">
-                                <rect key="frame" x="74.000000000000014" y="297" width="171.33333333333337" height="42.333333333333314"/>
+                                <rect key="frame" x="74.000000000000014" y="297" width="171.33333333333337" height="42.333333333333258"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="419-qQ-TW5">
                                         <rect key="frame" x="0.0" y="0.0" width="102" height="42.333333333333336"/>
@@ -48,7 +48,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="JbF-J4-8S9">
-                                <rect key="frame" x="667" y="297" width="155" height="34.333333333333314"/>
+                                <rect key="frame" x="667" y="297" width="155" height="34.333333333333258"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jir-vG-k9i">
                                         <rect key="frame" x="0.0" y="0.0" width="96.333333333333329" height="34.333333333333336"/>
@@ -79,10 +79,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0VV-M2-kwW">
-                                <rect key="frame" x="272" y="30" width="308" height="20.333333333333329"/>
+                                <rect key="frame" x="249" y="30" width="354.33333333333326" height="20.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Put the Bull's Eye as close as you can to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qc5-c6-hCm">
                                         <rect key="frame" x="0.0" y="0.0" width="308" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0P4-FI-zyi">
+                                        <rect key="frame" x="316" y="0.0" width="38.333333333333314" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -115,18 +121,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0j4-1Q-1eR">
                                 <rect key="frame" x="386.66666666666669" y="207" width="78.666666666666686" height="42.333333333333343"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Hit Me!"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Hit Me!"/>
                                 <connections>
                                     <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3zh-82-Mhn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0P4-FI-zyi">
-                                <rect key="frame" x="588" y="30" width="38.333333333333314" height="20.333333333333332"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -150,7 +149,6 @@
                         <outlet property="guessNumber" destination="0P4-FI-zyi" id="XZR-aw-RVj"/>
                         <outlet property="roundNum" destination="rmr-Vs-KSj" id="Zt9-68-XQz"/>
                         <outlet property="score" destination="zNT-Z6-5M7" id="IpH-iX-fXD"/>
-                        <outlet property="scoreNumber" destination="zNT-Z6-5M7" id="Yyw-Y9-oUD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
