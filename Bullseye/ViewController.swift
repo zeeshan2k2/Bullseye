@@ -6,21 +6,25 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     var currentValue: Int = 50
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // to play music as soon as the game starts
+        playBGMusic()
         assignBackground()
         showAlert(self)
     }
-
     
+//  function to assign a background image
     func assignBackground() {
         let background = UIImage(named: "Bullseye bg image.jpeg")
-
+        
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIView.ContentMode.scaleAspectFill
@@ -30,33 +34,101 @@ class ViewController: UIViewController {
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
     }
-//  text label where the random number to guess is shown
+    //  text label where the random number to guess is shown
     @IBOutlet var guessNumber: UILabel!
     
-//  variable to store guess number value as an integer
+    //  variable to store guess number value as an integer
     var guessNum = 0
     
-//  text label where the score is displayed
+    //  text label where the score is displayed
     @IBOutlet var score: UILabel!
     
-//  score number for current round score
+    //  score number for current round score
     var scoreNum = 0
-//  for sum of all score number
+    //  for sum of all score number
     var allScoreSum = -50
     
-//  text label for round number
+    //  text label for round number
     @IBOutlet var roundNum: UILabel!
     
-//  variable to store value of round number
-    var roundNumber = 0
+    //  variable to store value of round number
+    var roundNumber = 1
     
-//  a button to reset everthing
+    //  a button to reset everthing
     @IBAction func startOverButton(_ sender: Any) {
-        roundNumber = 0
+        roundNumber = 1
         allScoreSum = 0
         displayResult()
         guessingNumber()
+        
+//      for sound effect
+        guard let newSound = Bundle.main.path(forResource: startOverButtonSound, ofType:"mp3") else {
+            return }
+        let url = URL(fileURLWithPath: newSound)
+        
+        do {
+            if audioPlayerForStartOverButton == nil {
+                audioPlayerForStartOverButton = try AVAudioPlayer(contentsOf: url)
+            }
+            audioPlayerForStartOverButton?.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
+    
+//  hit me button status used for sound effect
+    var hitmeHasBeenClicked = false
+    
+//  this will be used to play and stop music
+    var musicStatus = 2
+    var audioPlayerForBG: AVAudioPlayer?
+    var audioPlayerForHitmeButton: AVAudioPlayer?
+    var audioPlayerForStartOverButton: AVAudioPlayer?
+    
+//  variables for different sounds
+    var backgroundMusicFile = "game-audio"
+    var hitmeButtonSound = "hit-me button sound"
+    var startOverButtonSound = "Start Over button click sound"
+
+    
+    
+    func playBGMusic() {
+//      to play music if music Status variable is even
+        if musicStatus % 2 == 0 {
+            guard let path = Bundle.main.path(forResource: backgroundMusicFile, ofType:"mp3") else {
+                return }
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                if audioPlayerForBG == nil {
+                    audioPlayerForBG = try AVAudioPlayer(contentsOf: url)
+                }
+                audioPlayerForBG?.play()
+//                audioPlayer?.numberOfLoops = -1
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("")
+        }
+    }
+    
+    func stopBGMusic() {
+        // to stop playing music
+        audioPlayerForBG?.stop()
+    }
+    
+//  this is what happens when the music toggle button is tapped
+    @IBAction func musicToggle(_ sender: UISegmentedControl) {
+        musicStatus += 1
+        if musicStatus % 2 == 0 {
+            playBGMusic()
+        } else {
+            stopBGMusic()
+        }
+    }
+
+        
     
 //  function to create a random number and sent it to text label associated with guess number
     func guessingNumber() -> Int {
@@ -73,6 +145,27 @@ class ViewController: UIViewController {
     
 //  function when hit me button is tapped
     @IBAction func showAlert(_ sender: Any) {
+        
+//      This function has to be run atleast once for the guess value to be set
+//      thats why we initially run it and while the hitmeHasBeenClicked variable is
+//      set to false after the intial setup it is set to true
+        if hitmeHasBeenClicked == true {
+            //      to play the button click sound
+            guard let newSound = Bundle.main.path(forResource: hitmeButtonSound, ofType:"mp3") else {
+                return }
+            let url = URL(fileURLWithPath: newSound)
+            
+            do {
+                if audioPlayerForHitmeButton == nil {
+                    audioPlayerForHitmeButton = try AVAudioPlayer(contentsOf: url)
+                }
+                audioPlayerForHitmeButton?.play()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+        
+        hitmeHasBeenClicked = true
         
 //      incrementing round number after each click
         roundNumber += 1
@@ -106,4 +199,5 @@ class ViewController: UIViewController {
         currentValue = lroundf(slider.value)
     }
 }
+
 

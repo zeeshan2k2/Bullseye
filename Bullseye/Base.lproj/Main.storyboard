@@ -63,7 +63,6 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="startOverButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLI-w1-dj6"/>
-                                                                            <segue destination="BYZ-38-t0r" kind="show" id="54d-b4-85i"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -378,11 +377,22 @@
                                     <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3zh-82-Mhn"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eHB-tE-wDW">
+                                <rect key="frame" x="79" y="28" width="75" height="32"/>
+                                <segments>
+                                    <segment title="🔊"/>
+                                    <segment title="🔇"/>
+                                </segments>
+                                <connections>
+                                    <action selector="musicToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="lcJ-op-jCp"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wKy-SX-RQE" secondAttribute="trailing" constant="34" id="5Lv-YD-j85"/>
+                            <constraint firstItem="2IO-Mk-qHr" firstAttribute="top" secondItem="eHB-tE-wDW" secondAttribute="bottom" constant="87" id="6SR-LA-aYB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JbF-J4-8S9" secondAttribute="bottom" constant="40.666666666666686" id="9w9-jI-DZm"/>
                             <constraint firstItem="0VV-M2-kwW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="FDt-JE-dVf"/>
                             <constraint firstItem="wKy-SX-RQE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K4B-e5-fGG"/>
@@ -392,6 +402,7 @@
                             <constraint firstItem="419-qQ-TW5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZEG-aO-gKC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="419-qQ-TW5" secondAttribute="bottom" constant="32.666666666666686" id="c2j-dQ-xsS"/>
                             <constraint firstItem="0j4-1Q-1eR" firstAttribute="top" secondItem="2IO-Mk-qHr" secondAttribute="bottom" constant="36.666666666666657" id="qCG-wt-q7N"/>
+                            <constraint firstItem="eHB-tE-wDW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qGE-IQ-3cG"/>
                             <constraint firstItem="wKy-SX-RQE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uyq-eu-Wrf"/>
                             <constraint firstAttribute="trailing" secondItem="JbF-J4-8S9" secondAttribute="trailing" constant="30" id="vF6-dC-QUz"/>
                             <constraint firstItem="0j4-1Q-1eR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vat-FA-bwh"/>

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C10CEC822BAA243F00C3A2E7 /* test-audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C10CEC812BAA243F00C3A2E7 /* test-audio.mp3 */; };
+		C10CEC842BAA249500C3A2E7 /* game-audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C10CEC832BAA249500C3A2E7 /* game-audio.mp3 */; };
+		C10CEC862BAA25FC00C3A2E7 /* hit-me button sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C10CEC852BAA25FC00C3A2E7 /* hit-me button sound.mp3 */; };
+		C10CEC882BAA38C100C3A2E7 /* Start Over button click sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C10CEC872BAA38C100C3A2E7 /* Start Over button click sound.mp3 */; };
+		C10CEC8C2BAA394000C3A2E7 /* Start Over button click sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C10CEC8B2BAA394000C3A2E7 /* Start Over button click sound1.mp3 */; };
 		C1C79EFB2BA8BFD800F80F50 /* Bullseye bg image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C1C79EFA2BA8BFD800F80F50 /* Bullseye bg image.jpeg */; };
 		C1CEC7372BA5D13E0040CC57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CEC7362BA5D13E0040CC57 /* AppDelegate.swift */; };
 		C1CEC7392BA5D13E0040CC57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CEC7382BA5D13E0040CC57 /* SceneDelegate.swift */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C10CEC812BAA243F00C3A2E7 /* test-audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "test-audio.mp3"; sourceTree = "<group>"; };
+		C10CEC832BAA249500C3A2E7 /* game-audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "game-audio.mp3"; sourceTree = "<group>"; };
+		C10CEC852BAA25FC00C3A2E7 /* hit-me button sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hit-me button sound.mp3"; sourceTree = "<group>"; };
+		C10CEC872BAA38C100C3A2E7 /* Start Over button click sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Start Over button click sound.mp3"; sourceTree = "<group>"; };
+		C10CEC8B2BAA394000C3A2E7 /* Start Over button click sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Start Over button click sound1.mp3"; sourceTree = "<group>"; };
 		C1C79EFA2BA8BFD800F80F50 /* Bullseye bg image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bullseye bg image.jpeg"; sourceTree = "<group>"; };
 		C1CEC7332BA5D13E0040CC57 /* Bullseye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bullseye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CEC7362BA5D13E0040CC57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +69,11 @@
 			isa = PBXGroup;
 			children = (
 				C1C79EFA2BA8BFD800F80F50 /* Bullseye bg image.jpeg */,
+				C10CEC8B2BAA394000C3A2E7 /* Start Over button click sound1.mp3 */,
+				C10CEC812BAA243F00C3A2E7 /* test-audio.mp3 */,
+				C10CEC832BAA249500C3A2E7 /* game-audio.mp3 */,
+				C10CEC872BAA38C100C3A2E7 /* Start Over button click sound.mp3 */,
+				C10CEC852BAA25FC00C3A2E7 /* hit-me button sound.mp3 */,
 				C1CEC7362BA5D13E0040CC57 /* AppDelegate.swift */,
 				C1CEC7382BA5D13E0040CC57 /* SceneDelegate.swift */,
 				C1CEC73A2BA5D13E0040CC57 /* ViewController.swift */,
@@ -129,9 +144,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1CEC7402BA5D1400040CC57 /* Assets.xcassets in Resources */,
+				C10CEC8C2BAA394000C3A2E7 /* Start Over button click sound1.mp3 in Resources */,
 				C1CEC7432BA5D1400040CC57 /* Base in Resources */,
 				C1CEC73E2BA5D13E0040CC57 /* Base in Resources */,
+				C10CEC842BAA249500C3A2E7 /* game-audio.mp3 in Resources */,
+				C10CEC882BAA38C100C3A2E7 /* Start Over button click sound.mp3 in Resources */,
 				C1C79EFB2BA8BFD800F80F50 /* Bullseye bg image.jpeg in Resources */,
+				C10CEC862BAA25FC00C3A2E7 /* hit-me button sound.mp3 in Resources */,
+				C10CEC822BAA243F00C3A2E7 /* test-audio.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
