@@ -97,40 +97,6 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="JbF-J4-8S9">
-                                <rect key="frame" x="669" y="297" width="153" height="34.333333333333314"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jir-vG-k9i">
-                                        <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="34.333333333333336"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eoV-eC-U5c">
-                                                <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="34.333333333333336"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZI-OC-uvv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="55.333333333333336" height="34.333333333333336"/>
-                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmr-Vs-KSj">
-                                                        <rect key="frame" x="55.333333333333371" y="0.0" width="39" height="34.333333333333336"/>
-                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFd-zU-NNJ">
-                                        <rect key="frame" x="103.33333333333339" y="0.0" width="49.666666666666671" height="34.333333333333336"/>
-                                        <color key="tintColor" red="0.36078431370000003" green="0.25098039220000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0VV-M2-kwW">
                                 <rect key="frame" x="225.66666666666663" y="30" width="401" height="26"/>
                                 <subviews>
@@ -389,6 +355,40 @@
                                     <action selector="musicToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="lcJ-op-jCp"/>
                                 </connections>
                             </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="JbF-J4-8S9">
+                                <rect key="frame" x="669" y="308" width="153" height="34.333333333333314"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jir-vG-k9i">
+                                        <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="34.333333333333336"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eoV-eC-U5c">
+                                                <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="34.333333333333336"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZI-OC-uvv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="55.333333333333336" height="34.333333333333336"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmr-Vs-KSj">
+                                                        <rect key="frame" x="55.333333333333371" y="0.0" width="39" height="34.333333333333336"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFd-zU-NNJ">
+                                        <rect key="frame" x="103.33333333333339" y="0.0" width="49.666666666666671" height="34.333333333333336"/>
+                                        <color key="tintColor" red="0.36078431370000003" green="0.25098039220000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -396,12 +396,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wKy-SX-RQE" secondAttribute="trailing" constant="34" id="5Lv-YD-j85"/>
                             <constraint firstItem="2IO-Mk-qHr" firstAttribute="top" secondItem="eHB-tE-wDW" secondAttribute="bottom" constant="87" id="6SR-LA-aYB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ije-Xt-aVC" secondAttribute="bottom" constant="27.666666666666629" id="7AX-of-sNH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JbF-J4-8S9" secondAttribute="bottom" constant="40.666666666666686" id="9w9-jI-DZm"/>
                             <constraint firstItem="0VV-M2-kwW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="FDt-JE-dVf"/>
                             <constraint firstItem="wKy-SX-RQE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K4B-e5-fGG"/>
                             <constraint firstItem="wKy-SX-RQE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="QOG-LQ-hw8"/>
                             <constraint firstItem="0VV-M2-kwW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xvp-7B-Rsv"/>
                             <constraint firstItem="wKy-SX-RQE" firstAttribute="top" secondItem="qc5-c6-hCm" secondAttribute="bottom" constant="90" id="YYl-1w-T9l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JbF-J4-8S9" secondAttribute="bottom" constant="29.666666666666686" id="Zsw-BX-8HD"/>
                             <constraint firstItem="0j4-1Q-1eR" firstAttribute="top" secondItem="2IO-Mk-qHr" secondAttribute="bottom" constant="36.666666666666657" id="qCG-wt-q7N"/>
                             <constraint firstItem="eHB-tE-wDW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qGE-IQ-3cG"/>
                             <constraint firstItem="Ije-Xt-aVC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rUa-Np-fCq"/>
@@ -419,7 +419,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116.90140845070422" y="3.8167938931297707"/>
+            <point key="canvasLocation" x="19" y="-5"/>
         </scene>
     </scenes>
     <resources>

@@ -62,18 +62,7 @@ class ViewController: UIViewController {
         guessingNumber()
         
 //      for sound effect
-        guard let newSound = Bundle.main.path(forResource: startOverButtonSound, ofType:"mp3") else {
-            return }
-        let url = URL(fileURLWithPath: newSound)
-        
-        do {
-            if audioPlayerForStartOverButton == nil {
-                audioPlayerForStartOverButton = try AVAudioPlayer(contentsOf: url)
-            }
-            audioPlayerForStartOverButton?.play()
-        } catch let error {
-            print(error.localizedDescription)
-        }
+        playButtonSound(buttonName: startOverButtonSound, audioVariable: audioPlayerForStartOverButton)
     }
     
 //  hit me button status used for sound effect
@@ -91,6 +80,32 @@ class ViewController: UIViewController {
     var startOverButtonSound = "Start Over button click sound"
 
     
+//  for button sound effect
+    func playButtonSound(buttonName: String, audioVariable: AVAudioPlayer?) {
+            guard let path1 = Bundle.main.path(forResource: buttonName, ofType:"mp3") else {
+                return }
+            let url1 = URL(fileURLWithPath: path1)
+            
+            if audioVariable == audioPlayerForHitmeButton {
+                do {
+                    if audioPlayerForHitmeButton == nil {
+                        audioPlayerForHitmeButton = try AVAudioPlayer(contentsOf: url1)
+                    }
+                    audioPlayerForHitmeButton?.play()
+                } catch let error {
+                    print(error.localizedDescription)
+                }
+            } else if audioVariable == audioPlayerForStartOverButton {
+                do {
+                    if audioPlayerForStartOverButton == nil {
+                        audioPlayerForStartOverButton = try AVAudioPlayer(contentsOf: url1)
+                    }
+                    audioPlayerForStartOverButton?.play()
+                } catch let error {
+                    print(error.localizedDescription)
+                }
+            }
+    }
     
     func playBGMusic() {
 //      to play music if music Status variable is even
@@ -104,7 +119,7 @@ class ViewController: UIViewController {
                     audioPlayerForBG = try AVAudioPlayer(contentsOf: url)
                 }
                 audioPlayerForBG?.play()
-//                audioPlayer?.numberOfLoops = -1
+                audioPlayerForBG?.numberOfLoops = -1
             } catch let error {
                 print(error.localizedDescription)
             }
@@ -152,19 +167,7 @@ class ViewController: UIViewController {
 //      thats why we initially run it and while the hitmeHasBeenClicked variable is
 //      set to false after the intial setup it is set to true
         if hitmeHasBeenClicked == true {
-            //      to play the button click sound
-            guard let newSound = Bundle.main.path(forResource: hitmeButtonSound, ofType:"mp3") else {
-                return }
-            let url = URL(fileURLWithPath: newSound)
-            
-            do {
-                if audioPlayerForHitmeButton == nil {
-                    audioPlayerForHitmeButton = try AVAudioPlayer(contentsOf: url)
-                }
-                audioPlayerForHitmeButton?.play()
-            } catch let error {
-                print(error.localizedDescription)
-            }
+            playButtonSound(buttonName: hitmeButtonSound, audioVariable: audioPlayerForHitmeButton)
         }
         
         hitmeHasBeenClicked = true
