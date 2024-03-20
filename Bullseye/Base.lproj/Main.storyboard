@@ -17,79 +17,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JqD-gV-X2W">
-                                <rect key="frame" x="79" y="306.33333333333337" width="174" height="38"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ije-Xt-aVC">
+                                <rect key="frame" x="79" y="306.33333333333331" width="174" height="38"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VLg-0Z-haI">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JqD-gV-X2W">
                                         <rect key="frame" x="0.0" y="0.0" width="174" height="38"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="cnd-cj-15D">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VLg-0Z-haI">
                                                 <rect key="frame" x="0.0" y="0.0" width="174" height="38"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="vC1-Dz-xA5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="38"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="cnd-cj-15D">
+                                                        <rect key="frame" x="0.0" y="0.0" width="174" height="38"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lm8-bx-Pid">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="vC1-Dz-xA5">
                                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="38"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="419-qQ-TW5">
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lm8-bx-Pid">
                                                                         <rect key="frame" x="0.0" y="0.0" width="93" height="38"/>
-                                                                        <color key="tintColor" red="0.370835211" green="0.28094106899999999" blue="0.19000098160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                        <state key="normal" title="Button">
-                                                                            <attributedString key="attributedTitle">
-                                                                                <fragment content="Start">
-                                                                                    <attributes>
-                                                                                        <color key="NSColor" red="0.36078431372549019" green="0.25098039215686274" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                        <font key="NSFont" size="20" name="MarkerFelt-Wide"/>
-                                                                                        <font key="NSOriginalFont" size="15" name="AlBayan-Bold"/>
-                                                                                    </attributes>
-                                                                                </fragment>
-                                                                                <fragment content=" ">
-                                                                                    <attributes>
-                                                                                        <color key="NSColor" red="0.36078431372549019" green="0.25098039215686274" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                        <font key="NSFont" size="20" name="MarkerFelt-Wide"/>
-                                                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                                                    </attributes>
-                                                                                </fragment>
-                                                                                <fragment content="Over">
-                                                                                    <attributes>
-                                                                                        <color key="NSColor" red="0.36078431372549019" green="0.25098039215686274" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                        <font key="NSFont" size="20" name="MarkerFelt-Wide"/>
-                                                                                        <font key="NSOriginalFont" size="15" name="AlBayan-Bold"/>
-                                                                                    </attributes>
-                                                                                </fragment>
-                                                                            </attributedString>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="startOverButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLI-w1-dj6"/>
-                                                                        </connections>
-                                                                    </button>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="419-qQ-TW5">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="93" height="38"/>
+                                                                                <color key="tintColor" red="0.370835211" green="0.28094106899999999" blue="0.19000098160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <state key="normal" title="Button">
+                                                                                    <attributedString key="attributedTitle">
+                                                                                        <fragment content="Start">
+                                                                                            <attributes>
+                                                                                                <color key="NSColor" red="0.36078431372549019" green="0.25098039215686274" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                <font key="NSFont" size="20" name="MarkerFelt-Wide"/>
+                                                                                                <font key="NSOriginalFont" size="15" name="AlBayan-Bold"/>
+                                                                                            </attributes>
+                                                                                        </fragment>
+                                                                                        <fragment content=" ">
+                                                                                            <attributes>
+                                                                                                <color key="NSColor" red="0.36078431372549019" green="0.25098039215686274" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                <font key="NSFont" size="20" name="MarkerFelt-Wide"/>
+                                                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                                                            </attributes>
+                                                                                        </fragment>
+                                                                                        <fragment content="Over">
+                                                                                            <attributes>
+                                                                                                <color key="NSColor" red="0.36078431372549019" green="0.25098039215686274" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                <font key="NSFont" size="20" name="MarkerFelt-Wide"/>
+                                                                                                <font key="NSOriginalFont" size="15" name="AlBayan-Bold"/>
+                                                                                            </attributes>
+                                                                                        </fragment>
+                                                                                    </attributedString>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="startOverButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLI-w1-dj6"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FZv-yW-UK7">
+                                                                <rect key="frame" x="115" y="0.0" width="59" height="38"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Af-Fq-hxu">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="38"/>
+                                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNT-Z6-5M7">
+                                                                        <rect key="frame" x="49" y="0.0" width="10" height="38"/>
+                                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FZv-yW-UK7">
-                                                        <rect key="frame" x="115" y="0.0" width="59" height="38"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Af-Fq-hxu">
-                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="38"/>
-                                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNT-Z6-5M7">
-                                                                <rect key="frame" x="49" y="0.0" width="10" height="38"/>
-                                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="4Af-Fq-hxu" firstAttribute="leading" secondItem="419-qQ-TW5" secondAttribute="trailing" constant="22" id="rPU-vd-jUR"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -293,7 +295,7 @@
                                 <rect key="frame" x="93" y="146" width="666" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYt-Ze-kJq">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="10" height="30"/>
                                         <attributedString key="attributedText">
                                             <fragment content="1">
                                                 <attributes>
@@ -304,7 +306,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2IO-Mk-qHr">
-                                        <rect key="frame" x="8" y="0.0" width="650" height="31"/>
+                                        <rect key="frame" x="18" y="0.0" width="610.66666666666663" height="31"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <color key="maximumTrackTintColor" systemColor="systemBrownColor"/>
                                         <connections>
@@ -312,7 +314,7 @@
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeP-9J-Lul">
-                                        <rect key="frame" x="666" y="0.0" width="0.0" height="30"/>
+                                        <rect key="frame" x="636.66666666666663" y="0.0" width="29.333333333333371" height="30"/>
                                         <attributedString key="attributedText">
                                             <fragment content="100">
                                                 <attributes>
@@ -393,16 +395,16 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wKy-SX-RQE" secondAttribute="trailing" constant="34" id="5Lv-YD-j85"/>
                             <constraint firstItem="2IO-Mk-qHr" firstAttribute="top" secondItem="eHB-tE-wDW" secondAttribute="bottom" constant="87" id="6SR-LA-aYB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ije-Xt-aVC" secondAttribute="bottom" constant="27.666666666666629" id="7AX-of-sNH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JbF-J4-8S9" secondAttribute="bottom" constant="40.666666666666686" id="9w9-jI-DZm"/>
                             <constraint firstItem="0VV-M2-kwW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="FDt-JE-dVf"/>
                             <constraint firstItem="wKy-SX-RQE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K4B-e5-fGG"/>
                             <constraint firstItem="wKy-SX-RQE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="QOG-LQ-hw8"/>
                             <constraint firstItem="0VV-M2-kwW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xvp-7B-Rsv"/>
                             <constraint firstItem="wKy-SX-RQE" firstAttribute="top" secondItem="qc5-c6-hCm" secondAttribute="bottom" constant="90" id="YYl-1w-T9l"/>
-                            <constraint firstItem="419-qQ-TW5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZEG-aO-gKC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="419-qQ-TW5" secondAttribute="bottom" constant="32.666666666666686" id="c2j-dQ-xsS"/>
                             <constraint firstItem="0j4-1Q-1eR" firstAttribute="top" secondItem="2IO-Mk-qHr" secondAttribute="bottom" constant="36.666666666666657" id="qCG-wt-q7N"/>
                             <constraint firstItem="eHB-tE-wDW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qGE-IQ-3cG"/>
+                            <constraint firstItem="Ije-Xt-aVC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rUa-Np-fCq"/>
                             <constraint firstItem="wKy-SX-RQE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uyq-eu-Wrf"/>
                             <constraint firstAttribute="trailing" secondItem="JbF-J4-8S9" secondAttribute="trailing" constant="30" id="vF6-dC-QUz"/>
                             <constraint firstItem="0j4-1Q-1eR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vat-FA-bwh"/>

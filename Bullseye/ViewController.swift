@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     //  text label for round number
     @IBOutlet var roundNum: UILabel!
     
-    //  variable to store value of round number
+    //  variable to store value of round numbe
     var roundNumber = 1
     
     //  a button to reset everthing
@@ -80,7 +80,7 @@ class ViewController: UIViewController {
     var hitmeHasBeenClicked = false
     
 //  this will be used to play and stop music
-    var musicStatus = 2
+    var musicStatus = true
     var audioPlayerForBG: AVAudioPlayer?
     var audioPlayerForHitmeButton: AVAudioPlayer?
     var audioPlayerForStartOverButton: AVAudioPlayer?
@@ -94,7 +94,7 @@ class ViewController: UIViewController {
     
     func playBGMusic() {
 //      to play music if music Status variable is even
-        if musicStatus % 2 == 0 {
+        if musicStatus == true {
             guard let path = Bundle.main.path(forResource: backgroundMusicFile, ofType:"mp3") else {
                 return }
             let url = URL(fileURLWithPath: path)
@@ -108,6 +108,7 @@ class ViewController: UIViewController {
             } catch let error {
                 print(error.localizedDescription)
             }
+            musicStatus = false
         } else {
             print("")
         }
@@ -120,11 +121,12 @@ class ViewController: UIViewController {
     
 //  this is what happens when the music toggle button is tapped
     @IBAction func musicToggle(_ sender: UISegmentedControl) {
-        musicStatus += 1
-        if musicStatus % 2 == 0 {
+        if musicStatus == true {
             playBGMusic()
+            musicStatus = false
         } else {
             stopBGMusic()
+            musicStatus = true
         }
     }
 
