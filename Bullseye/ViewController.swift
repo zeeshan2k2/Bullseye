@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     @IBOutlet var roundNum: UILabel!
     
     //  variable to store value of round numbe
-    var roundNumber = 1
+    var roundNumber = 0
     
     //  a button to reset everthing
     @IBAction func startOverButton(_ sender: Any) {
