@@ -14,13 +14,34 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//      customizing the slider
+        let thumbImageNormal = UIImage(named: "SliderThumb-Normal")!
+        slider.setThumbImage(thumbImageNormal, for: .normal)
+        
+        let thumbImageHighlighted = UIImage(named: "SliderThumb-Highlighted")
+        slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
+        
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+        let trackLeftImage = UIImage(named: "SliderTrackLeft")!
+        let trackLeftResizable = trackLeftImage.resizableImage(withCapInsets: insets)
+        slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
+        
+        let trackRightImage = UIImage(named: "SliderTrackRight")!
+        let trackRightResizable = trackRightImage.resizableImage(withCapInsets: insets)
+        slider.setMaximumTrackImage(trackRightResizable, for: .normal)
+        
+            
+        
         // to play music as soon as the game starts
         playBGMusic()
         guessingNumber()
 //        assignBackground()
         showAlert(self)
     }
+    
+    @IBOutlet weak var slider: UISlider!
     
     //  text label where the random number to guess is shown
     @IBOutlet var guessNumber: UILabel!
@@ -34,7 +55,7 @@ class ViewController: UIViewController {
     //  score number for current round score
     var scoreNum = 0
     //  for sum of all score number
-    var allScoreSum = -50
+    var allScoreSum = 0
     
     //  text label for round number
     @IBOutlet var roundNum: UILabel!
@@ -48,9 +69,17 @@ class ViewController: UIViewController {
         allScoreSum = 0
         displayResult()
         guessingNumber()
-        
+        slider.value = 50
 //      for sound effect
         playButtonSound(buttonName: SystemButtonSound)
+        
+//      for transition effect
+        let transition = CATransition()
+        transition.type = CATransitionType.fade
+        transition.duration = 1
+        transition.timingFunction = CAMediaTimingFunction(name:
+          CAMediaTimingFunctionName.easeOut)
+        view.layer.add(transition, forKey: nil)
     }
     
 //  hit me button status used for sound effect
@@ -139,6 +168,8 @@ class ViewController: UIViewController {
     
 //  function when hit me button is tapped
     @IBAction func showAlert(_ sender: Any) {
+//      resetting slider after each click
+        slider.value = 50
         
 //      This function has to be run atleast once for the guess value to be set
 //      thats why we initially run it and while the hitmeHasBeenClicked variable is
@@ -158,7 +189,7 @@ class ViewController: UIViewController {
             }
         }
         
-        hitmeHasBeenClicked = true
+        
         
 //      incrementing round number after each click
         roundNumber += 1
@@ -175,7 +206,7 @@ class ViewController: UIViewController {
             title = "Perfect!"
             scoreNum += 100
         } else if difference < 5 {
-            title = "Your almost had it!"
+            title = "You almost had it!"
             scoreNum += 50
         } else if difference < 10 {
             title = "Pretty good!"
@@ -194,9 +225,13 @@ class ViewController: UIViewController {
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
-        
-        displayResult()
-//        guessNum = guessingNumber()
+        if hitmeHasBeenClicked == false {
+            allScoreSum = 0
+            displayResult()
+        } else {
+            displayResult()
+        }
+        hitmeHasBeenClicked = true
         
     }
 
