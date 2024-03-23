@@ -22,19 +22,6 @@ class ViewController: UIViewController {
         showAlert(self)
     }
     
-////  function to assign a background image
-//    func assignBackground() {
-//        let background = UIImage(named: "Bullseye bg image.jpeg")
-//        
-//        var imageView : UIImageView!
-//        imageView = UIImageView(frame: view.bounds)
-//        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
-//        imageView.clipsToBounds = true
-//        imageView.image = background
-//        imageView.center = view.center
-//        view.addSubview(imageView)
-//        self.view.sendSubviewToBack(imageView)
-//    }
     //  text label where the random number to guess is shown
     @IBOutlet var guessNumber: UILabel!
     
@@ -63,7 +50,7 @@ class ViewController: UIViewController {
         guessingNumber()
         
 //      for sound effect
-        playButtonSound(buttonName: startOverButtonSound, audioVariable: audioPlayerForStartOverButton)
+        playButtonSound(buttonName: SystemButtonSound)
     }
     
 //  hit me button status used for sound effect
@@ -72,39 +59,28 @@ class ViewController: UIViewController {
 //  this will be used to play and stop music
     var musicStatus = true
     var audioPlayerForBG: AVAudioPlayer?
-    var audioPlayerForHitmeButton: AVAudioPlayer?
-    var audioPlayerForStartOverButton: AVAudioPlayer?
+    var audioPlayerForHitMeButton: AVAudioPlayer?
+    var audioPlayerForSystemButton: AVAudioPlayer?
     
 //  variables for different sounds
     var backgroundMusicFile = "game-audio"
     var hitmeButtonSound = "hit-me button sound"
-    var startOverButtonSound = "Start Over button click sound"
+    var SystemButtonSound = "System Button click sound"
 
     
 //  for button sound effect
-    func playButtonSound(buttonName: String, audioVariable: AVAudioPlayer?) {
+    public func playButtonSound(buttonName: String) {
             guard let path1 = Bundle.main.path(forResource: buttonName, ofType:"mp3") else {
                 return }
             let url1 = URL(fileURLWithPath: path1)
             
-            if audioVariable == audioPlayerForHitmeButton {
-                do {
-                    if audioPlayerForHitmeButton == nil {
-                        audioPlayerForHitmeButton = try AVAudioPlayer(contentsOf: url1)
-                    }
-                    audioPlayerForHitmeButton?.play()
-                } catch let error {
-                    print(error.localizedDescription)
+            do {
+                if audioPlayerForSystemButton == nil {
+                    audioPlayerForSystemButton = try AVAudioPlayer(contentsOf: url1)
                 }
-            } else if audioVariable == audioPlayerForStartOverButton {
-                do {
-                    if audioPlayerForStartOverButton == nil {
-                        audioPlayerForStartOverButton = try AVAudioPlayer(contentsOf: url1)
-                    }
-                    audioPlayerForStartOverButton?.play()
-                } catch let error {
-                    print(error.localizedDescription)
-                }
+                audioPlayerForSystemButton?.play()
+            } catch let error {
+                print(error.localizedDescription)
             }
     }
     
@@ -168,7 +144,18 @@ class ViewController: UIViewController {
 //      thats why we initially run it and while the hitmeHasBeenClicked variable is
 //      set to false after the intial setup it is set to true
         if hitmeHasBeenClicked == true {
-            playButtonSound(buttonName: hitmeButtonSound, audioVariable: audioPlayerForHitmeButton)
+            guard let path1 = Bundle.main.path(forResource: hitmeButtonSound, ofType:"mp3") else {
+                return }
+            let url1 = URL(fileURLWithPath: path1)
+            
+            do {
+                if audioPlayerForHitMeButton == nil {
+                    audioPlayerForHitMeButton = try AVAudioPlayer(contentsOf: url1)
+                }
+                audioPlayerForHitMeButton?.play()
+            } catch let error {
+                print(error.localizedDescription)
+            }
         }
         
         hitmeHasBeenClicked = true
@@ -198,10 +185,7 @@ class ViewController: UIViewController {
         
     //      variable to score all scores
             allScoreSum += scoreNum
-        
-//      showing the value if current slider position
-//        let message = "The value of current slider is: \(currentValue)"
-        
+         
 //      an alert to display current round score
         let alert = UIAlertController(title: title, message: "You scored \(scoreNum)", preferredStyle: .alert)
         
@@ -219,6 +203,9 @@ class ViewController: UIViewController {
 //  this is used to save the value after slider is moved
     @IBAction func sliderMoved(_ slider: UISlider) {
         currentValue = lroundf(slider.value)
+    }
+    @IBAction func infoButton(_ sender: Any) {
+        playButtonSound(buttonName: SystemButtonSound)
     }
 }
 
