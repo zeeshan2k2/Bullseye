@@ -11,6 +11,7 @@
 		C10CEC842BAA249500C3A2E7 /* game-audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C10CEC832BAA249500C3A2E7 /* game-audio.mp3 */; };
 		C10CEC862BAA25FC00C3A2E7 /* hit-me button sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C10CEC852BAA25FC00C3A2E7 /* hit-me button sound.mp3 */; };
 		C10CEC882BAA38C100C3A2E7 /* Start Over button click sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C10CEC872BAA38C100C3A2E7 /* Start Over button click sound.mp3 */; };
+		C19E52692BAEE7F600C64DD0 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E52682BAEE7F600C64DD0 /* AboutViewController.swift */; };
 		C1C79EFB2BA8BFD800F80F50 /* Bullseye bg image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C1C79EFA2BA8BFD800F80F50 /* Bullseye bg image.jpeg */; };
 		C1CEC7372BA5D13E0040CC57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CEC7362BA5D13E0040CC57 /* AppDelegate.swift */; };
 		C1CEC7392BA5D13E0040CC57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CEC7382BA5D13E0040CC57 /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 		C10CEC832BAA249500C3A2E7 /* game-audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "game-audio.mp3"; sourceTree = "<group>"; };
 		C10CEC852BAA25FC00C3A2E7 /* hit-me button sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hit-me button sound.mp3"; sourceTree = "<group>"; };
 		C10CEC872BAA38C100C3A2E7 /* Start Over button click sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Start Over button click sound.mp3"; sourceTree = "<group>"; };
+		C19E52682BAEE7F600C64DD0 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C1C79EFA2BA8BFD800F80F50 /* Bullseye bg image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bullseye bg image.jpeg"; sourceTree = "<group>"; };
 		C1CEC7332BA5D13E0040CC57 /* Bullseye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bullseye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CEC7362BA5D13E0040CC57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				C1CEC7362BA5D13E0040CC57 /* AppDelegate.swift */,
 				C1CEC7382BA5D13E0040CC57 /* SceneDelegate.swift */,
 				C1CEC73A2BA5D13E0040CC57 /* ViewController.swift */,
+				C19E52682BAEE7F600C64DD0 /* AboutViewController.swift */,
 				C1CEC73C2BA5D13E0040CC57 /* Main.storyboard */,
 				C1CEC73F2BA5D1400040CC57 /* Assets.xcassets */,
 				C1CEC7412BA5D1400040CC57 /* LaunchScreen.storyboard */,
@@ -160,6 +163,7 @@
 			files = (
 				C1CEC73B2BA5D13E0040CC57 /* ViewController.swift in Sources */,
 				C1CEC7372BA5D13E0040CC57 /* AppDelegate.swift in Sources */,
+				C19E52692BAEE7F600C64DD0 /* AboutViewController.swift in Sources */,
 				C1CEC7392BA5D13E0040CC57 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

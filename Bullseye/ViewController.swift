@@ -17,23 +17,24 @@ class ViewController: UIViewController {
 
         // to play music as soon as the game starts
         playBGMusic()
-        assignBackground()
+        guessingNumber()
+//        assignBackground()
         showAlert(self)
     }
     
-//  function to assign a background image
-    func assignBackground() {
-        let background = UIImage(named: "Bullseye bg image.jpeg")
-        
-        var imageView : UIImageView!
-        imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.image = background
-        imageView.center = view.center
-        view.addSubview(imageView)
-        self.view.sendSubviewToBack(imageView)
-    }
+////  function to assign a background image
+//    func assignBackground() {
+//        let background = UIImage(named: "Bullseye bg image.jpeg")
+//        
+//        var imageView : UIImageView!
+//        imageView = UIImageView(frame: view.bounds)
+//        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+//        imageView.clipsToBounds = true
+//        imageView.image = background
+//        imageView.center = view.center
+//        view.addSubview(imageView)
+//        self.view.sendSubviewToBack(imageView)
+//    }
     //  text label where the random number to guess is shown
     @IBOutlet var guessNumber: UILabel!
     
@@ -178,24 +179,40 @@ class ViewController: UIViewController {
 //      formula for score
         scoreNum = 100 - abs(guessNum - currentValue)
         
-//      variable to score all scores
-        allScoreSum += scoreNum
+
         
+//      to show title depending on score difference
+        let difference = 100 - scoreNum
+        let title: String
+        if difference == 0 {
+            title = "Perfect!"
+            scoreNum += 100
+        } else if difference < 5 {
+            title = "Your almost had it!"
+            scoreNum += 50
+        } else if difference < 10 {
+            title = "Pretty good!"
+        } else {
+            title = "Not even close..."
+        }
+        
+    //      variable to score all scores
+            allScoreSum += scoreNum
         
 //      showing the value if current slider position
-        let message = "The value of current slider is: \(currentValue)"
+//        let message = "The value of current slider is: \(currentValue)"
         
 //      an alert to display current round score
-        let alert = UIAlertController(title: "Your score is \(scoreNum)", message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: "You scored \(scoreNum)", preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: { _ in self.guessingNumber()})
         
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
         
         displayResult()
-        guessNum = guessingNumber()
+//        guessNum = guessingNumber()
         
     }
 
