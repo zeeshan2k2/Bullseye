@@ -11,6 +11,7 @@ import AVFoundation
 class ViewController: UIViewController {
     
     var currentValue: Int = 50
+//    var accuracyPercentage: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -204,10 +205,8 @@ class ViewController: UIViewController {
         let title: String
         if difference == 0 {
             title = "Perfect!"
-            scoreNum += 100
         } else if difference < 5 {
             title = "You almost had it!"
-            scoreNum += 50
         } else if difference < 10 {
             title = "Pretty good!"
         } else {
@@ -216,9 +215,16 @@ class ViewController: UIViewController {
         
     //      variable to score all scores
             allScoreSum += scoreNum
-         
+        
+        var accuracyPercentage: Double = 0.0
+        if currentValue <= guessNum {
+            accuracyPercentage = (Double(currentValue) / Double(guessNum) * 100)
+        } else if currentValue > guessNum {
+            accuracyPercentage = (Double(guessNum) / Double(currentValue) * 100)
+        }
+        print(accuracyPercentage)
 //      an alert to display current round score
-        let alert = UIAlertController(title: title, message: "You scored \(scoreNum)", preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: "Your slider was at \(currentValue) \nYour accuracy was \(lroundf(Float(accuracyPercentage)))% \nYou scored \(scoreNum) out of 100", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Ok", style: .default, handler: { _ in self.guessingNumber()})
         
@@ -232,7 +238,6 @@ class ViewController: UIViewController {
             displayResult()
         }
         hitmeHasBeenClicked = true
-        
     }
 
 //  this is used to save the value after slider is moved
