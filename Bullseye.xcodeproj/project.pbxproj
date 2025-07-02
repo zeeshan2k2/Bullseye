@@ -10,6 +10,7 @@
 		C10CEC822BAA243F00C3A2E7 /* test-audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C10CEC812BAA243F00C3A2E7 /* test-audio.mp3 */; };
 		C10CEC842BAA249500C3A2E7 /* game-audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C10CEC832BAA249500C3A2E7 /* game-audio.mp3 */; };
 		C10CEC862BAA25FC00C3A2E7 /* hit-me button sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C10CEC852BAA25FC00C3A2E7 /* hit-me button sound.mp3 */; };
+		C178A66C2E15EC1F00E0672D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C178A66B2E15EC1F00E0672D /* WebKit.framework */; };
 		C19E52692BAEE7F600C64DD0 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E52682BAEE7F600C64DD0 /* AboutViewController.swift */; };
 		C1C79EFB2BA8BFD800F80F50 /* Bullseye bg image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C1C79EFA2BA8BFD800F80F50 /* Bullseye bg image.jpeg */; };
 		C1CEC7372BA5D13E0040CC57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CEC7362BA5D13E0040CC57 /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 		C10CEC812BAA243F00C3A2E7 /* test-audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "test-audio.mp3"; sourceTree = "<group>"; };
 		C10CEC832BAA249500C3A2E7 /* game-audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "game-audio.mp3"; sourceTree = "<group>"; };
 		C10CEC852BAA25FC00C3A2E7 /* hit-me button sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hit-me button sound.mp3"; sourceTree = "<group>"; };
+		C178A66B2E15EC1F00E0672D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C19E52682BAEE7F600C64DD0 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C1C79EFA2BA8BFD800F80F50 /* Bullseye bg image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bullseye bg image.jpeg"; sourceTree = "<group>"; };
 		C1CEC7332BA5D13E0040CC57 /* Bullseye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bullseye.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,17 +47,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C178A66C2E15EC1F00E0672D /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C178A66A2E15EC1F00E0672D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C178A66B2E15EC1F00E0672D /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C1CEC72A2BA5D13E0040CC57 = {
 			isa = PBXGroup;
 			children = (
 				C1DB3C062BAF14A800103ED4 /* BullsEye.html */,
 				C1CEC7352BA5D13E0040CC57 /* Bullseye */,
+				C178A66A2E15EC1F00E0672D /* Frameworks */,
 				C1CEC7342BA5D13E0040CC57 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,8 +90,8 @@
 				C10CEC852BAA25FC00C3A2E7 /* hit-me button sound.mp3 */,
 				C1CEC7362BA5D13E0040CC57 /* AppDelegate.swift */,
 				C1CEC7382BA5D13E0040CC57 /* SceneDelegate.swift */,
-				C1CEC73A2BA5D13E0040CC57 /* ViewController.swift */,
 				C19E52682BAEE7F600C64DD0 /* AboutViewController.swift */,
+				C1CEC73A2BA5D13E0040CC57 /* ViewController.swift */,
 				C1CEC73C2BA5D13E0040CC57 /* Main.storyboard */,
 				C1CEC73F2BA5D1400040CC57 /* Assets.xcassets */,
 				C1CEC7412BA5D1400040CC57 /* LaunchScreen.storyboard */,
@@ -327,7 +339,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,7 +367,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

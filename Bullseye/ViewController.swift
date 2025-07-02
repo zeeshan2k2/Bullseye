@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         let trackRightImage = UIImage(named: "SliderTrackRight")!
         let trackRightResizable = trackRightImage.resizableImage(withCapInsets: insets)
         slider.setMaximumTrackImage(trackRightResizable, for: .normal)
-        
             
         
         // to play music as soon as the game starts
@@ -151,7 +150,6 @@ class ViewController: UIViewController {
             musicStatus = true
         }
     }
-
         
     
 //  function to create a random number and sent it to text label associated with guess number
